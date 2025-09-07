@@ -1,17 +1,19 @@
-namespace learncsharp
+namespace learncsharp;
+using Newtonsoft.Json;
+
+public class DataImport
 {
-    using Newtonsoft.Json;
+    // Add properties and methods for data import functionality here
 
-    public class DataImport
+    public Person ImportFile(string filePath)
     {
-        // Add properties and methods for data import functionality here
-
-        public Person ImportFile(string filePath)
+        Console.WriteLine($"Import file is:  {filePath} .");
+        string json = File.ReadAllText(filePath);
+        Person? person = JsonConvert.DeserializeObject<Person>(json);
+        if (person == null)
         {
-            Console.WriteLine($"Import file is:  {filePath} .");
-            string json = File.ReadAllText(filePath);
-            Person? person = JsonConvert.DeserializeObject<Person>(json);
-            return person;
+            throw new InvalidOperationException("Failed to deserialize Person from the provided file.");
         }
+        return person;
     }
 }
