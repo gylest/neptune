@@ -24,11 +24,11 @@ class Program
         string projectRoot = AppDomain.CurrentDomain.BaseDirectory;
         string filePath = Path.Combine(projectRoot, "person_jd.json");
 
-        // Use an absolute path for testing
-        const string testFile = @"C:\Users\Tony Gyles\source\repos\neptune\learncsharp\person_jd.json";
+        // Use an absolute path for testing - doesn't work for codespaces
+        //const string testFile = @"C:\Users\Tony Gyles\source\repos\neptune\learncsharp\person_jd.json";
 
         DataImport dataImport = new DataImport();
-        Person? person = dataImport.ImportFile(testFile);
+        Person? person = dataImport.ImportFile(filePath);
 
     }
 }
