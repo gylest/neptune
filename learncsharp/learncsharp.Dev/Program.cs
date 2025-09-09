@@ -24,11 +24,15 @@ class Program
         string projectRoot = AppDomain.CurrentDomain.BaseDirectory;
         string filePath = Path.Combine(projectRoot, "person_jd.json");
 
-        // Use an absolute path for testing - doesn't work for codespaces
-        //const string testFile = @"C:\Users\Tony Gyles\source\repos\neptune\learncsharp\person_jd.json";
-
         DataImport dataImport = new DataImport();
         Person? person = dataImport.ImportFile(filePath);
+
+        //
+        // Control Patterns
+        //
+        Order order = new Order { Total = 1200.00m, CustomerTier = 'G' };
+        string discountLevel = ControlPatterns.ComputeDiscountLevel(order);
+        Console.WriteLine($"Discount level for order total {order.Total} is {discountLevel}");
 
     }
 }
