@@ -30,6 +30,7 @@ This solution contains multiple C# projects demonstrating various features, incl
 ## How to Build
 
 Run the following command in the solution directory:
+
 ```
 dotnet build
 ```
