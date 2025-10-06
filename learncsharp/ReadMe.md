@@ -31,14 +31,15 @@ This solution contains multiple C# projects demonstrating various features, incl
 
 Run the following command in the solution directory:
 
-```
+```cmd
 dotnet build
 ```
 
 ## How to Run Tests
 
 Run the following command in the solution directory:
-```
+
+```cmd
 dotnet test
 ```
 
