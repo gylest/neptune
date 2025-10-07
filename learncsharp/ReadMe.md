@@ -2,7 +2,7 @@
 
 This solution contains multiple C# projects demonstrating various features, including basic programming concepts, data import, and unit testing with xUnit.  
 
-Thi solution uses `dotnet` commands for package management, tool management, building and testing.  
+This solution uses `dotnet` commands for package management, tool management, building and testing.  
 
 ## Projects
 
@@ -11,11 +11,13 @@ Thi solution uses `dotnet` commands for package management, tool management, bui
 - **Type:** Console Application
 - **Description:** Main project demonstrating basic C# features, data import, and record types.
 - **Key Files:**
-  - `Program.cs`: Entry point, runs demos and imports data.
+  - `Algorithm.cs`: LeetCode problem solutions.
   - `BasicFeatures.cs`: Contains utility methods and record demonstrations.
-  - `DataImport.cs`: Handles importing data from JSON files.
   - `ControlPatterns.cs`: Patterns used with switch expressions.
+  - `DataImport.cs`: Handles importing data from JSON files.
   - `Person.cs`: Defines the Person class used for data import.
+  - `Program.cs`: Entry point, runs demos and imports data.
+
 - **Packages:**
   - `Newtonsoft.Json`
 
@@ -29,8 +31,12 @@ Thi solution uses `dotnet` commands for package management, tool management, bui
   - `ControlPatternsTests.cs`: Unit tests for methods in `ControlPatterns`.
 - **Packages:**
   - `xunit`, `xunit.runner.visualstudio`, `Microsoft.NET.Test.Sdk`, `coverlet.collector`
+- **Notes:**
+  - To view code coverage report open file `coverage-report/index.html` with Live Server
 
 ## Build and Test Commands
+
+List all NuGet packages in project: `dotnet list package`
 
 Check for outdated NuGet packages: `dotnet list package --outdated`
 
@@ -46,7 +52,7 @@ Generate code coverage XML file for .NET and xUnit: `dotnet test --collect:"XPla
 
 Install report generator tool: `dotnet tool install -g dotnet-reportgenerator-globaltool`
 
-Check .NET tools: `dotnet tool list -g`
+Check .NET tools installed: `dotnet tool list -g`
 
 Convert XML code coverage report into HTML report: `reportgenerator -reports:"**\TestResults\**\coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html`
 
