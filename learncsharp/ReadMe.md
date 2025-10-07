@@ -1,6 +1,8 @@
 # learncsharp Solution
 
-This solution contains multiple C# projects demonstrating various features, including basic programming concepts, data import, and unit testing with xUnit.
+This solution contains multiple C# projects demonstrating various features, including basic programming concepts, data import, and unit testing with xUnit.  
+
+Thi solution uses `dotnet` commands for package management, tool management, building and testing.  
 
 ## Projects
 
@@ -22,26 +24,31 @@ This solution contains multiple C# projects demonstrating various features, incl
 - **Type:** xUnit Test Project
 - **Description:** Contains unit tests for the main project, using the xUnit framework.
 - **Key Files:**
-  - `UnitTest1.cs`: Example unit tests for methods in `BasicFeatures`.
-  - `UnitTest2.cs`: Example unit tests for methods in `ControlPatterns`.
+  - `AlgorithmTests.cs`: Unit tests for methods in `Algorithm`.
+  - `BasicfeaturesTests.cs`: Unit tests for methods in `BasicFeatures`.
+  - `ControlPatternsTests.cs`: Unit tests for methods in `ControlPatterns`.
 - **Packages:**
   - `xunit`, `xunit.runner.visualstudio`, `Microsoft.NET.Test.Sdk`, `coverlet.collector`
 
-## How to Build
+## Build and Test Commands
 
-Run the following command in the solution directory:
+Check for outdated NuGet packages: `dotnet list package --outdated`
 
-```cmd
-dotnet build
-```
+Update a package: `dotnet add package Newtonsoft.Json --version 13.0.4`
 
-## How to Run Tests
+Clean solution (remove all build output): `dotnet clean`
 
-Run the following command in the solution directory:
+Build solution: `dotnet build`
 
-```cmd
-dotnet test
-```
+Run Tests: `dotnet test`
+
+Generate code coverage XML file for .NET and xUnit: `dotnet test --collect:"XPlat Code Coverage"`
+
+Install report generator tool: `dotnet tool install -g dotnet-reportgenerator-globaltool`
+
+Check .NET tools: `dotnet tool list -g`
+
+Convert XML code coverage report into HTML report: `reportgenerator -reports:"**\TestResults\**\coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html`
 
 ## How to Debug
 
