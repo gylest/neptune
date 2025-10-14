@@ -44,5 +44,38 @@ public class Algorithm
         // return value if not found
         return resultNotFound;
     }
+    
+    //
+    // Finds the first non-repeating character in a string.
+    //
+    public char FirstNonRepeatingChar(string s)
+    {
+        var characterCount = new Dictionary<char, int>();
+
+        // Iterate over string ans store count for each character
+        foreach (char ch in s)
+        {
+            if (characterCount.ContainsKey(ch))
+            {
+                characterCount[ch]++;
+            }
+            else
+            {
+                characterCount[ch] = 1;
+            }
+        }
+
+        // Iterate over string loking for first non-repeater
+        foreach (char ch in s)
+        {
+            if (characterCount[ch] == 1)
+            {
+                return ch;
+            }
+        }
+
+        // return null character if no non-repeater found
+        return '\0';
+    }
 }
 
