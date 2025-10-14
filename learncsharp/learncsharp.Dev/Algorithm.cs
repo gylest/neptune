@@ -52,7 +52,7 @@ public class Algorithm
     {
         var characterCount = new Dictionary<char, int>();
 
-        // Iterate over string ans store count for each character
+        // Iterate over string and store count for each character
         foreach (char ch in s)
         {
             if (characterCount.ContainsKey(ch))
