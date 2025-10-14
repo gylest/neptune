@@ -65,7 +65,7 @@ public class Algorithm
             }
         }
 
-        // Iterate over string loking for first non-repeater
+        // Iterate over string looking for first non-repeater
         foreach (char ch in s)
         {
             if (characterCount[ch] == 1)
