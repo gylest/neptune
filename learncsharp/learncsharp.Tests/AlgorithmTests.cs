@@ -1,7 +1,3 @@
-using System;
-using System.IO;
-using Xunit;
-
 namespace learncsharp.Tests;
 
 public class AlgorithmTests
