@@ -1,4 +1,4 @@
-namespace learncsharp;
+namespace learncsharp.Dev;
 
 public record RPersonMutable
 {

@@ -1,5 +1,4 @@
-namespace learncsharp;
-using Newtonsoft.Json;
+namespace learncsharp.Dev;
 
 public class DataImport
 {

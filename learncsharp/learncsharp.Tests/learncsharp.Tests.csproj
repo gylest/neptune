@@ -6,15 +6,14 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    
-    <!-- Roslyn Analyzers Configuration -->
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\learncsharp.Dev\learncsharp.Dev.csproj" />
+    <Using Include="learncsharp.Dev" />
+    <Using Include="Xunit" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +26,10 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\learncsharp.Dev\learncsharp.Dev.csproj" />
   </ItemGroup>
 
 </Project>
