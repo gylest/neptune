@@ -44,7 +44,7 @@ public class Algorithm
         // return value if not found
         return resultNotFound;
     }
-    
+
     //
     // Finds the first non-repeating character in a string.
     //
@@ -76,6 +76,55 @@ public class Algorithm
 
         // return null character if no non-repeater found
         return '\0';
+    }
+
+    //
+    // Convert Roman to Integer
+    //
+    // Example 1: Input: s = "III" Output: 3 Explanation: III = 3.
+    // Example 2: Input: s = "LVIII" Output: 58 Explanation: L = 50, V= 5, III = 3.
+    // Example 3: Input: s = "MCMXCIV" Output: 1994 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+    //
+    public int RomanToInt(string s)
+    {
+        var romanNumerals = new Dictionary<string, int>() { { "I", 1 }, { "V", 5 }, { "X", 10 } , { "L", 50 }, { "C", 100 },
+                                                            { "D", 500 }, { "M", 1000 }, { "IV", 4 } , { "IX", 9 }, { "XL", 40 },
+                                                            { "XC", 90 }, { "CD", 400 }, { "CM", 900 } };
+
+        int Total = 0;
+        bool skip = false;
+
+        for (int i = 0; i < s.Length; ++i)
+        {
+            if (skip)
+            {
+                skip = false;
+            }
+            else
+            {
+                string s1 = s[i].ToString();
+                if (i < (s.Length - 1))
+                {
+                    string s2 = s.Substring(i, 2);
+                    if (romanNumerals.ContainsKey(s2))
+                    {
+                        skip = true;
+                        Total += romanNumerals[s2];
+                    }
+                    else
+                    {
+                        Total += romanNumerals[s1];
+                    }
+                }
+                else
+                {
+                    Total += romanNumerals[s1];
+                }
+            }
+        }
+
+        return Total;
+
     }
 }
 

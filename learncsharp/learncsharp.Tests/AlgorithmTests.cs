@@ -15,13 +15,24 @@ public class AlgorithmTests
     }
 
     [Theory]
-    [InlineData( "aabccdebf", 'd')]
-    [InlineData( "aabbcc", '\0')]
-    [InlineData( "xyzabcdexzplkjhgged", 'y')]
+    [InlineData("aabccdebf", 'd')]
+    [InlineData("aabbcc", '\0')]
+    [InlineData("xyzabcdexzplkjhgged", 'y')]
     public void FirstNonRepeatingChar_ComputesExpectedChar(string s, char expected)
     {
         char result = algo.FirstNonRepeatingChar(s);
         Assert.Equal(expected, result);
+    }
+
+    [Theory]
+    [InlineData( "III", 3)]
+    [InlineData( "LVIII", 58)]
+    [InlineData("MCMXCIV", 1994)]
+    [InlineData("MMMXLV", 3045)]
+    public void RomanToInt_ComputesExpectedValue(string s, int expected)
+    {
+        int actual = algo.RomanToInt(s);
+        Assert.Equal(expected, actual);
     }
 
 }
