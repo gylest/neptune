@@ -106,10 +106,11 @@ public class Algorithm
                 if (i < (s.Length - 1))
                 {
                     string s2 = s.Substring(i, 2);
-                    if (romanNumerals.ContainsKey(s2))
+                    bool readOk = romanNumerals.TryGetValue(s2, out int val);
+                    if (readOk)
                     {
                         skip = true;
-                        Total += romanNumerals[s2];
+                        Total += val;
                     }
                     else
                     {
