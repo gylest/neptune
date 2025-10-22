@@ -3,7 +3,7 @@ namespace learncsharp.Tests;
 public class AlgorithmTests
 {
     private readonly Algorithm algo = new Algorithm();
-     
+
     [Theory]
     [InlineData(new int[] { 2, 7, 11, 15 }, 9, new int[] { 0, 1 })]
     [InlineData(new int[] { 3, 2, 4 }, 6, new int[] { 1, 2 })]
@@ -25,10 +25,11 @@ public class AlgorithmTests
     }
 
     [Theory]
-    [InlineData( "III", 3)]
-    [InlineData( "LVIII", 58)]
+    [InlineData("III", 3)]
+    [InlineData("LVIII", 58)]
     [InlineData("MCMXCIV", 1994)]
     [InlineData("MMMXLV", 3045)]
+    [InlineData("DXCI", 591)]
     public void RomanToInt_ComputesExpectedValue(string s, int expected)
     {
         int actual = algo.RomanToInt(s);
