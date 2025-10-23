@@ -79,3 +79,53 @@ public static class Arrays
     }
 
 }
+
+public static class HashTables
+{
+    public static void InvokeHashTables()
+    {
+        // Declaration and Initialization
+        var capitals = new Dictionary<string, string>
+        {
+            { "USA", "Washington, D.C." },
+            { "France", "Paris" },
+            { "Japan", "Tokyo" },
+            { "New Zealand", "Wellington" },
+            { "Italy", "Rome" },
+            { "Australia", "Canberra" },
+            { "Brazil", "Brasilia" },
+            { "Canada", "Ottawa" },
+            { "UK", "London" }
+        };
+
+        // Adding Elements
+        capitals["Germany"] = "Berlin";
+
+        // Accessing Elements
+        string capitalOfFrance = capitals["France"];
+
+        if (capitals.TryGetValue("Australia", out string? val))
+            Console.WriteLine($"The capital of Australia is {val}");
+
+        // Iteration
+        foreach (var kvp in capitals)
+        {
+            Console.WriteLine($"Country: {kvp.Key}, Capital: {kvp.Value}");
+        }
+
+        // Searching
+        bool hasJapan = capitals.ContainsKey("Japan");
+        bool hasCapitalTokyo = capitals.ContainsValue("Tokyo");
+
+        // Removing Elements
+        capitals.Remove("USA");
+
+        // Count
+        int count = capitals.Count;
+    }   
+    public static void StartHere()
+    {
+        InvokeHashTables();
+
+    }
+}
