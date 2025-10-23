@@ -36,25 +36,26 @@ This solution uses `dotnet` commands for package management, tool management, bu
 
 ## Build and Test Commands
 
-List all NuGet packages in project: `dotnet list package`
+| Command | Description |
+| --- | --- |
+| `dotnet list package`|List all NuGet packages in project|
+| `dotnet list package --outdated`|Check for outdated NuGet packages|
+| `dotnet add package Newtonsoft.Json --version 13.0.4`|Update a package|
+| `dotnet clean`|Clean solution|
+| `dotnet build`|Build solution|
+| `dotnet test`|Run tests|
+| `dotnet test --logger "console;verbosity=detailed"`|Run tests with detailed logging|
+| `dotnet test --collect:"XPlat Code Coverage"`|Generate code coverage XML file for .NET and xUnit|
+| `dotnet tool install -g dotnet-reportgenerator-globaltool`|Install report generator tool|
+| `dotnet tool list -g`|Check .NET tools installed|
 
-Check for outdated NuGet packages: `dotnet list package --outdated`
+## Report Generator Commands
 
-Update a package: `dotnet add package Newtonsoft.Json --version 13.0.4`
+Convert XML code coverage report into HTML report:  
 
-Clean solution (remove all build output): `dotnet clean`
-
-Build solution: `dotnet build`
-
-Run Tests: `dotnet test`
-
-Generate code coverage XML file for .NET and xUnit: `dotnet test --collect:"XPlat Code Coverage"`
-
-Install report generator tool: `dotnet tool install -g dotnet-reportgenerator-globaltool`
-
-Check .NET tools installed: `dotnet tool list -g`
-
-Convert XML code coverage report into HTML report: `reportgenerator -reports:"**\TestResults\**\coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html`
+```cmd
+reportgenerator -reports:"**\TestResults\**\coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html
+```  
 
 ## How to Debug
 
