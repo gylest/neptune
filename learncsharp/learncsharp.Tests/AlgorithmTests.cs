@@ -36,4 +36,14 @@ public class AlgorithmTests
         Assert.Equal(expected, actual);
     }
 
+    [Theory]
+    [InlineData(new int[] { 1, 2, 2, 3 }, true)]
+    [InlineData(new int[] { 6, 5, 4, 4 }, true)]
+    [InlineData(new int[] { 1, 3, 2 }, false)]
+    [InlineData(new int[] { 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 1 }, false)]
+    public void IsMonotonic_ReturnsExpectedResult(int[] nums, bool expected)
+    {
+        bool result = algo.IsMonotonic(nums);
+        Assert.Equal(expected, result);
+    }
 }

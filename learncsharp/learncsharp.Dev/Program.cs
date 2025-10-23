@@ -5,16 +5,15 @@ class Program
     static void Main(string[] args)
     {
         // Basic console output
-        Console.WriteLine("Hello, World!");
-        int age = 845;
-        Console.WriteLine($"Hello, Tony! You are {age} years old.");
+        Console.WriteLine("Start Learncsharp!");
 
-        //
-        // Basic Features
-        //
+        // Language Features
         BasicFeatures basicFeatures = new BasicFeatures();
         basicFeatures.DemonstrateRecords();
         basicFeatures.FizzBuzz();
+
+        // Data Structures
+        Arrays.StartHere();
 
     }
 }

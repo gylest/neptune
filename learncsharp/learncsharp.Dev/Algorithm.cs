@@ -127,5 +127,49 @@ public class Algorithm
         return Total;
 
     }
+
+    //
+    // Monotonic array
+    //
+    // Example 1: Input: nums = [1,2,2,3] Output: true
+    // Example 2: Input: nums = [6,5,4,4] Output: true
+    // Example 3: Input: nums = [1,3,2] Output: false
+    // Example 4: Input: nums = [1,1,1,1,2,2,2,2,2,2,3,3,3,4,1] Output: false
+    //
+    public bool IsMonotonic(int[] nums)
+    {
+        if (nums.Length <= 1) return true;
+        int element = nums[0];
+        bool directionFound = false;
+        bool directionInc = false;
+
+        for (int i = 1; i < nums.Length; ++i)
+        {
+            int currentElement = nums[i];
+
+            if (directionFound)
+            {
+                if ((currentElement > element) && (!directionInc)) return false;
+                if ((currentElement < element) && directionInc) return false;
+            }
+            else
+            {
+                if (currentElement > element)
+                {
+                    directionFound = true;
+                    directionInc = true;
+                }
+                else if (currentElement < element)
+                {
+                    directionFound = true;
+                    directionInc = false;
+                }
+            }
+
+            element = currentElement;
+        }
+
+        return true;
+    }
 }
 
