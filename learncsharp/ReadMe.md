@@ -1,6 +1,6 @@
 # learncsharp Solution
 
-This solution contains multiple C# projects demonstrating various features, including basic programming concepts, data import, and unit testing with xUnit.  
+This solution contains multiple C# projects focusing on algorithms, data structures and unit testing with xUnit.  
 
 This solution uses `dotnet` commands for package management, tool management, building and testing.  
 
@@ -8,15 +8,16 @@ This solution uses `dotnet` commands for package management, tool management, bu
 
 ### 1. learncsharp.Dev
 
-- **Type:** Console Application
-- **Description:** Main project demonstrating basic C# features, data import, and record types.
-- **Key Files:**
-  - `Algorithm.cs`: LeetCode problem solutions.
-  - `BasicFeatures.cs`: Contains utility methods and record demonstrations.
-  - `ControlPatterns.cs`: Patterns used with switch expressions.
-  - `DataImport.cs`: Handles importing data from JSON files.
-  - `Person.cs`: Defines the Person class used for data import.
-  - `Program.cs`: Entry point, runs demos and imports data.
+- **Type:** Console Application  
+- **Description:** Main project demonstrating algorithms and data structures.  
+- **Key Files:**  
+  - `Algorithm.cs`: LeetCode problem solutions.  
+  - `BasicFeatures.cs`: Contains utility methods and record demonstrations.  
+  - `ControlPatterns.cs`: Patterns used with switch expressions.  
+  - `DataImport.cs`: Handles importing data from JSON files.  
+  - `DataStructures.cs`: Formats for organizing, storing and managaing data efficiently.  
+  - `Person.cs`: Defines the Person class used for data import.  
+  - `Program.cs`: Entry point, runs demos and imports data.  
 
 - **Packages:**
   - `Newtonsoft.Json`
@@ -29,6 +30,8 @@ This solution uses `dotnet` commands for package management, tool management, bu
   - `AlgorithmTests.cs`: Unit tests for methods in `Algorithm`.
   - `BasicfeaturesTests.cs`: Unit tests for methods in `BasicFeatures`.
   - `ControlPatternsTests.cs`: Unit tests for methods in `ControlPatterns`.
+  - `DataImportTests.cs`: Unit tests for methods in `DataImport`.
+
 - **Packages:**
   - `xunit`, `xunit.runner.visualstudio`, `Microsoft.NET.Test.Sdk`, `coverlet.collector`
 - **Notes:**
