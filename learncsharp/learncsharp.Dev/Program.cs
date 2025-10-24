@@ -15,6 +15,7 @@ class Program
         // Data Structures
         Arrays.StartHere();
         HashTables.StartHere();
+        LinkedLists.StartHere();
 
     }
 }

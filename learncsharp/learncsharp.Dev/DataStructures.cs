@@ -6,7 +6,7 @@ public static class Arrays
     public static void StaticArrays()
     {
         // Declaration and Initialization
-        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int[] numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
         // Accessing Elements
         numbers[6] = 42; // Modify the 7th element (index 6)
@@ -122,10 +122,51 @@ public static class HashTables
 
         // Count
         int count = capitals.Count;
-    }   
+    }
     public static void StartHere()
     {
         InvokeHashTables();
 
+    }
+}
+
+public static class LinkedLists
+{
+    public static void InvokeLinkedLists()
+    {
+        // Declaration and Initialization
+        var numbers = new LinkedList<int>([1, 2, 3, 4, 5]);
+
+        // Adding Elements
+        numbers.AddLast(6);
+        numbers.AddFirst(0);
+        var node = numbers.Find(3);
+        if (node != null)
+            numbers.AddAfter(node, 99);
+
+        // Accessing Elements
+        var first = numbers.First;
+        var last = numbers.Last;
+
+        // Iteration
+        foreach (var n in numbers)
+            Console.WriteLine(n);
+
+        // Searching
+        var searchNode = numbers.Find(4);
+        bool found = searchNode != null;
+
+        // Removing Elements
+        numbers.Remove(2);
+        numbers.RemoveFirst();
+        numbers.RemoveLast();
+
+        // Count
+        int count = numbers.Count;
+    }
+
+    public static void StartHere()
+    {
+        InvokeLinkedLists();
     }
 }
