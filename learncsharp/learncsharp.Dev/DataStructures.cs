@@ -31,7 +31,7 @@ public static class Arrays
         Array.Copy(numbers, copy, numbers.Length);
 
         // Reversing
-        Array.Reverse(numbers); 
+        Array.Reverse(numbers);
 
         // Length
         int length = numbers.Length;
@@ -66,7 +66,7 @@ public static class Arrays
         letters.Reverse();
 
         // Copying
-        var copy = new List<char>(letters);  
+        var copy = new List<char>(letters);
 
         // count
         int count = letters.Count;
@@ -168,5 +168,50 @@ public static class LinkedLists
     public static void StartHere()
     {
         InvokeLinkedLists();
+    }
+}
+
+public static class StacksAndQueues
+{
+    //
+    // Queue<T> is a FIFO (first-in, first-out) collection.
+    // Ideal for scenarios like task scheduling, buffering, and breadth-first search.
+    //
+    public static void InvokeQueues()
+    {
+        Queue<int> queue = new Queue<int>();
+
+        queue.Enqueue(1); // Add to end
+        queue.Enqueue(2);
+
+        int first = queue.Dequeue(); // Remove from front (returns 1)
+        int peek = queue.Peek();     // View front without removing (returns 2)
+        bool isEmpty = queue.Count == 0;
+
+        Console.WriteLine($"First dequeued: {first}, Next in queue: {peek}, Is empty: {isEmpty}");
+    }
+
+    //
+    // Stack<T> is a LIFO (last-in, first-out) collection.
+    // Ideal for scenarios like undo operations, parsing, and algorithmic tasks.
+    //
+    public static void InvokeStacks()
+    {
+        Stack<int> stack = new Stack<int>();
+
+        stack.Push(1); // Add to top
+        stack.Push(2);
+
+        int top = stack.Pop();   // Remove and return top element (returns 2)
+        int peek = stack.Peek(); // View top element without removing (returns 1)
+        bool isEmpty = stack.Count == 0;
+
+        Console.WriteLine($"Top popped: {top}, Next on stack: {peek}, Is empty: {isEmpty}");
+    }
+
+    public static void StartHere()
+    {
+        InvokeStacks();
+        InvokeQueues();
     }
 }
