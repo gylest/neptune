@@ -17,6 +17,7 @@ class Program
         HashTables.StartHere();
         LinkedLists.StartHere();
         StacksAndQueues.StartHere();
+        SortedDictionaryMethods.InvokeSortedDictionary();
 
     }
 }

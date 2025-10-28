@@ -215,3 +215,124 @@ public static class StacksAndQueues
         InvokeQueues();
     }
 }
+
+public class BinaryTreeNode<T>
+{
+    public T Value { get; set; }
+    public BinaryTreeNode<T>? Left { get; set; }
+    public BinaryTreeNode<T>? Right { get; set; }
+
+    public BinaryTreeNode(T value)
+    {
+        Value = value;
+        Left = null;
+        Right = null;
+    }
+}
+
+public class BinaryTree<T>
+{
+    public BinaryTreeNode<T>? Root { get; set; }
+
+    public BinaryTree()
+    {
+        Root = null;
+    }
+
+    public void Insert(T value)
+    {
+        if (Root == null)
+        {
+            Root = new BinaryTreeNode<T>(value);
+        }
+        else
+        {
+            InsertRec(Root, value);
+        }
+    }
+
+    public void InsertRec(BinaryTreeNode<T> node, T value)
+    {
+        if (Comparer<T>.Default.Compare(value, node.Value) < 0)
+        {
+            if (node.Left == null)
+                node.Left = new BinaryTreeNode<T>(value);
+            else
+                InsertRec(node.Left, value);
+        }
+        else
+        {
+            if (node.Right == null)
+                node.Right = new BinaryTreeNode<T>(value);
+            else
+                InsertRec(node.Right, value);
+        }
+    }
+
+    public void InOrderTraversal(BinaryTreeNode<T>? node)
+    {
+        if (node != null)
+        {
+            InOrderTraversal(node.Left);
+            Console.WriteLine(node.Value);
+            InOrderTraversal(node.Right);
+        }
+    }
+    
+    public bool LookupRec(BinaryTreeNode<T>? node, T value)
+    {
+        if (node == null)
+            return false;
+        if (Comparer<T>.Default.Compare(node.Value, value) == 0)
+            return true;
+
+        // Continue searching in the left or right subtree
+        return LookupRec(node.Left, value) || LookupRec(node.Right, value);
+    }
+
+}
+
+
+// A SortedDictionary is a collection of key-value pairs
+// that are sorted by the keys based on their natural ordering.
+// It provides efficient retrieval, addition, and removal of elements
+// while maintaining the sorted order of keys.
+// Common use cases include scenarios where sorted data access is required,
+// such as in financial applications, leaderboards, and priority-based systems.
+// Internally , it is typically implemented using a balanced binary search tree,
+// ensuring logarithmic time complexity for key-based operations i.e., O(log n).
+public class SortedDictionaryMethods
+{
+    public static void InvokeSortedDictionary()
+    {
+        // Initialize SortedDictionary
+        SortedDictionary<string, int> sortedDict = new SortedDictionary<string, int>();
+        sortedDict["banana"] = 3;
+        sortedDict["apple"] = 4;
+        sortedDict["pear"] = 1;
+        sortedDict["orange"] = 2;
+        sortedDict["cherry"] = 7;
+        sortedDict["strawberry"] = 13;
+        sortedDict["lime"] = 22;
+
+        // Check if 'apple' exists
+        if (sortedDict.ContainsKey("apple"))
+        {
+            Console.WriteLine("Contains 'apple' key: True");
+        }
+
+        // Remove 'apple' and check removal
+        bool isRemoved = sortedDict.Remove("apple");
+        Console.WriteLine("Removed 'apple': " + isRemoved); // Output: True
+
+        // Attempt to fetch a non-existing key
+        if (!sortedDict.TryGetValue("apple", out int value))
+        {
+            Console.WriteLine("Value: Not found"); // Output: Value: Not found
+        }
+
+        // Get the last key-value pair using LINQ
+        var lastEntry = sortedDict.Last();
+        Console.WriteLine($"Last entry: {lastEntry.Key}={lastEntry.Value}"); // Output: pear=1
+    }
+}
