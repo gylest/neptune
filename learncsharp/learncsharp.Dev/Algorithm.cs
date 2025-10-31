@@ -172,4 +172,3 @@ public class Algorithm
         return true;
     }
 }
-

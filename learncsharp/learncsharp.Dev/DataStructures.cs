@@ -292,7 +292,6 @@ public class BinaryTree<T>
 
 }
 
-
 // A SortedDictionary is a collection of key-value pairs
 // that are sorted by the keys based on their natural ordering.
 // It provides efficient retrieval, addition, and removal of elements
@@ -364,7 +363,7 @@ public class Graphs
         }
     }
 
-    public  void StartHere()
+    public void StartHere()
     {
         Graphs graph = new Graphs();
 
