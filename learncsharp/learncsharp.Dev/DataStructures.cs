@@ -336,3 +336,46 @@ public class SortedDictionaryMethods
         Console.WriteLine($"Last entry: {lastEntry.Key}={lastEntry.Value}"); // Output: pear=1
     }
 }
+
+public class Graphs
+{
+    // Adjacency list representation
+    private Dictionary<int, List<int>> adjacencyList = new Dictionary<int, List<int>>();
+
+    public void AddEdge(int vertex, int neighbor)
+    {
+        if (!adjacencyList.ContainsKey(vertex))
+        {
+            adjacencyList[vertex] = new List<int>();
+        }
+        adjacencyList[vertex].Add(neighbor);
+    }
+
+    public void PrintGraph()
+    {
+        foreach (var vertex in adjacencyList)
+        {
+            Console.Write(vertex.Key + " -> ");
+            foreach (var neighbor in vertex.Value)
+            {
+                Console.Write(neighbor + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public  void StartHere()
+    {
+        Graphs graph = new Graphs();
+
+        // Adding edges to the graph
+        graph.AddEdge(1, 2);
+        graph.AddEdge(1, 3);
+        graph.AddEdge(2, 4);
+        graph.AddEdge(3, 5);
+        graph.AddEdge(4, 5);
+
+        // Printing the graph
+        graph.PrintGraph();
+    }
+}
