@@ -18,6 +18,7 @@ class Program
         LinkedLists.StartHere();
         StacksAndQueues.StartHere();
         SortedDictionaryMethods.InvokeSortedDictionary();
-
+        Graphs graphs = new Graphs();
+        graphs.StartHere();
     }
 }
