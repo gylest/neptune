@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet: Fun Facts</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Style for the active navigation link */
+        .nav-link-active {
+            color: #2563eb;
+            /* text-blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 
+      =========== NAVIGATION BAR ===========
+      This empty header will be filled by layout.js
+    -->
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50">
+        <!-- Content is injected by layout.js -->
+    </header>
+
+    <!-- =========== MAIN CONTENT AREA =========== -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- =========== MY PET PAGE CONTENT =========== -->
+        <div id="page-pet" class="page-content">
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">My Pet: Ella</h1>
+
+                <!-- About My Pet Box -->
+                <div class="bg-blue-50 p-6 rounded-lg mb-8 flex flex-col md:flex-row items-center gap-6">
+                    <img src="ellaplustortoise.jpg" alt="My Pet"
+                        class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-md">
+                    <div>
+                        <p class="text-lg text-gray-700"><strong>Breed:</strong> Shih Tzu </p>
+                        <p class="text-lg text-gray-700"><strong>Age:</strong> 8 years</p>
+                        <p class="text-lg text-gray-700"><strong>Favorite Toy:</strong> Rabbit</p>
+                        <p class="text-lg text-gray-700 mt-2">An affectionate and playful companion.</p>
+                    </div>
+                </div>
+
+                <!-- Pet Blog Post -->
+                <article class="space-y-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">10 Interesting Facts About Shih Tzu</h2>
+                    <p class="text-sm text-gray-500 mb-3">Posted on: Nov 8, 2025</p>
+
+                    <div class="mb-6">
+                        <img src="Shih-Tzu-Alert.jpg" class="w-full max-w-md rounded-lg shadow-md mb-6" alt="Dog Alert">
+                    </div>
+
+                    <!-- Facts Grid -->
+                    <div class="space-y-4">
+                        <!-- Fact 1 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">1</span>
+                                Their Name Means <span class="text-blue-600 ml-1">Little Lion</span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                The name "Shih Tzu" (pronounced <em>sheed-zoo</em>) comes from the Mandarin Chinese word for "lion."
+                                The breed was given this name due to its resemblance to the lions depicted in
+                                traditional Chinese art and its association with Buddhist legends where a small
+                                lion-like dog traveled with the Buddha.
+                            </p>
+                        </div>
+
+                        <!-- Fact 2 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">2</span>
+                                They Have Royal Roots
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                Shih Tzus were cherished companions to Chinese emperors for centuries.
+                                They lived luxurious lives inside the imperial palace and were so prized that for many
+                                years, it was forbidden for anyone outside the royalty to own one.
+                            </p>
+                        </div>
+
+                        <!-- Fact 3 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">3</span>
+                                The Breed Nearly Went Extinct
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                Following the end of imperial rule in China, the breed's numbers dwindled dramatically.
+                                The Shih Tzu as we know it today was saved thanks to a very small breeding stock—every
+                                modern Shih Tzu can trace its lineage back to just 14 dogs (seven males and seven
+                                females) that were used to rebuild the breed.
+                            </p>
+                        </div>
+
+                        <!-- Fact 4 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">4</span>
+                                They Are Nicknamed <span class="text-blue-600 ml-1">Chrysanthemum-Faced Dogs</span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                This charming nickname comes from the way the hair on their muzzle grows.
+                                It sprouts upwards and outwards in all directions, resembling the petals of a
+                                chrysanthemum flower.
+                            </p>
+                        </div>
+
+                        <!-- Fact 5 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">5</span>
+                                They Have a Double Coat, But Shed Minimally
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                Despite their long, luxurious-looking fur, Shih Tzus are surprisingly low-shedding.
+                                They have a double coat, but the shed hair tends to get caught in the outer coat rather
+                                than falling onto furniture.
+                                This is why they require daily brushing to prevent mats and tangles.
+                            </p>
+                        </div>
+
+                        <!-- Fact 6 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">6</span>
+                                They Are an Ancient Breed
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                DNA analysis confirms that the Shih Tzu is one of the 14 most ancient dog breeds.
+                                Their ancestors are believed to have originated in the monasteries of Tibet, where they
+                                were likely given as gifts to Chinese royalty.
+                            </p>
+                        </div>
+
+                        <!-- Fact 7 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">7</span>
+                                An Underbite is a Breed Standard
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                A distinct feature of the Shih Tzu is its undershot bite, or underbite.
+                                This is where the lower jaw is slightly longer than the upper jaw, causing the bottom
+                                teeth to protrude in front of the top teeth when the mouth is closed.
+                                This is a required trait in the breed standard.
+                            </p>
+                        </div>
+
+                        <!-- Fact 8 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">8</span>
+                                They Were Bred Purely for Companionship
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                Unlike many other breeds that were developed for hunting, herding, or guarding, the Shih
+                                Tzu has always had one job: to be a companion.
+                                This history is reflected in their affectionate, outgoing, and trusting nature.
+                            </p>
+                        </div>
+
+                        <!-- Fact 9 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">9</span>
+                                They Are Prone to Specific Health Issues
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                Their adorable flat faces (a trait known as brachycephalic) can lead to respiratory
+                                problems, and they are sensitive to heat.
+                                Their large, prominent eyes are also susceptible to dryness, irritation, and injury.
+                            </p>
+                        </div>
+
+                        <!-- Fact 10 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3">10</span>
+                                A Famous Empress Was a Super-Fan
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed pl-11">
+                                The Dowager Empress Cixi (Tzu Hsi), who ruled China from 1861 to 1908, was a famous and
+                                dedicated breeder of Shih Tzus, Pugs, and Pekingese.
+                                She reportedly had a vast kennel and played a direct role in developing the breed,
+                                keeping meticulous records.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- 
+      =========== FOOTER ===========
+      This empty footer will be filled by layout.js
+    -->
+    <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200">
+        <!-- Content is injected by layout.js -->
+    </footer>
+
+    <!-- 
+      =========== JAVASCRIPT ===========
+      We load the layout.js file. Note the "../" path
+      because this file is in a sub-folder.
+    -->
+    <script src="../layout.js" defer></script>
+
+</body>
+
+</html>

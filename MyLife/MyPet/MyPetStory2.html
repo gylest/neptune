@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet: A Day at the Park</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the active navigation link */
+        .nav-link-active {
+            color: #2563eb; /* text-blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 
+      =========== NAVIGATION BAR ===========
+      This empty header will be filled by layout.js
+    -->
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50">
+        <!-- Content is injected by layout.js -->
+    </header>
+
+    <!-- =========== MAIN CONTENT AREA =========== -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- =========== MY PET PAGE CONTENT =========== -->
+        <div id="page-pet" class="page-content">
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">My Pet: Ella</h1>
+                
+                <!-- About My Pet Box -->
+                <div class="bg-blue-50 p-6 rounded-lg mb-8 flex flex-col md:flex-row items-center gap-6">
+                    <img src="ellaplustortoise.jpg" alt="My Pet" class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-md">
+                    <div>
+                        <p class="text-lg text-gray-700"><strong>Breed:</strong> Shih Tzu</p>
+                        <p class="text-lg text-gray-700"><strong>Age:</strong> 8 years</p>
+                        <p class="text-lg text-gray-700"><strong>Favorite Toy:</strong> Rabbit</p>
+                        <p class="text-lg text-gray-700 mt-2">An affectionate and playful companion.</p>
+                    </div>
+                </div>
+
+                <!-- Pet Blog Post -->
+                <article class="space-y-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">A Day at the Park</h2>
+                    <p class="text-sm text-gray-500 mb-3">Posted on: Nov 15, 2025</p>
+                    
+                    <p class="text-gray-700 text-lg">
+                        Full details to be supplied soon.
+                    </p>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- 
+      =========== FOOTER ===========
+      This empty footer will be filled by layout.js
+    -->
+    <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200">
+        <!-- Content is injected by layout.js -->
+    </footer>
+
+    <!-- 
+      =========== JAVASCRIPT ===========
+      We load the layout.js file. Note the "../" path
+      because this file is in a sub-folder.
+    -->
+    <script src="../layout.js" defer></script>
+
+</body>
+</html>

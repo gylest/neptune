@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the active navigation link */
+        .nav-link-active {
+            color: #2563eb; /* text-blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 
+      =========== NAVIGATION BAR ===========
+      This empty header will be filled by layout.js
+    -->
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50">
+        <!-- Content is injected by layout.js -->
+    </header>
+
+    <!-- =========== MAIN CONTENT AREA =========== -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- =========== ABOUT ME PAGE =========== -->
+        <div id="page-about" class="page-content">
+            <section class="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
+                <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">About Me</h1>
+                
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-10">
+                    <img src="portrait.jpg" alt="A photo of me" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-lg flex-shrink-0">
+                    <div class="text-lg text-gray-700 space-y-4 text-center md:text-left">
+                        <p>Hi, I'm <b>Tony Gyles</b>. I'm a software engineer by day and an aspiring blogger by night. This website is my personal space to share what I'm passionate about.</p>
+                        <p>I love the challenge of solving complex problems in my work, and you'll find some of my technical explorations in the <a href="#" class="text-blue-600 hover:underline">Tech Articles</a> section.</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8 space-y-6 text-lg text-gray-700">
+                    <h2 class="text-3xl font-bold text-gray-800">My Interests</h2>
+                    <p>When I'm not coding, I'm probably either at the park with my pet, <b>Ella</b>, watching movies or playing computer games. I'm a huge film buff, from indie dramas to big sci-fi epics. I'll be sharing my (sometimes controversial) opinions in the <a href="#" class="text-blue-600 hover:underline">Movie Reviews</a> section.</p>
+                    <p>This site is a blend of all those interests, plus any other interesting news I come across. Thanks for stopping by!</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- 
+      =========== FOOTER ===========
+      This empty footer will be filled by layout.js
+    -->
+    <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200">
+        <!-- Content is injected by layout.js -->
+    </footer>
+
+    <!-- 
+      =========== JAVASCRIPT ===========
+      We load layout.js from the root, just like index.html
+    -->
+    <script src="layout.js" defer></script>
+
+</body>
+</html>
