@@ -225,3 +225,10 @@ AppPackages/
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
+
+# JavaScript/Node Files
+node_modules/
+coverage/
+built/
+dist/
+package-lock.json

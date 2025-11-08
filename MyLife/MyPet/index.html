@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet Stories</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font as the default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the active navigation link */
+        .nav-link-active {
+            color: #2563eb; /* text-blue-600 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 
+      =========== NAVIGATION BAR ===========
+      This empty header will be filled by layout.js
+    -->
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50">
+        <!-- Content is injected by layout.js -->
+    </header>
+
+    <!-- =========== MAIN CONTENT AREA =========== -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- =========== MY PET LISTING PAGE =========== -->
+        <div id="page-pet-listing" class="page-content">
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold text-gray-800 mb-8">My Pet Stories</h1>
+
+                <!-- Grid of Pet Stories -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Story 1 Card -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/93c5fd/ffffff?text=Day+at+Park" alt="Day at Park" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Nov 15, 2025</span>
+                            <h3 class="text-xl font-bold mb-2">A Day at the Park</h3>
+                            <p class="text-gray-600 mb-4">We had a great time playing fetch and meeting other dogs...</p>
+                            <a href="/MyPet/MyPetStory2.html" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Story 2 Card -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https://placehold.co/600x400/818cf8/ffffff?text=Fun+Facts" alt="Fun Facts" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Nov 8, 2025</span>
+                            <h3 class="text-xl font-bold mb-2">10 Interesting Facts About Shih Tzu</h3>
+                            <p class="text-gray-600 mb-4">This week, I researched the breed and discovered some fascinating facts...</p>
+                            <a href="/MyPet/MyPetStory1.html" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Add new story cards here as you write them -->
+                    <!-- 
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                        <img src="https... (new image)" alt="Pet" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">[Date]</span>
+                            <h3 class="text-xl font-bold mb-2">[Story 3 Title]</h3>
+                            <p class="text-gray-600 mb-4">[Story 3 snippet...]</p>
+                            <a href="/MyPet/MyPetStory3.html" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    -->
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- 
+      =========== FOOTER ===========
+      This empty footer will be filled by layout.js
+    -->
+    <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200">
+        <!-- Content is injected by layout.js -->
+    </footer>
+
+    <!-- 
+      =========== JAVASCRIPT ===========
+      We load the layout.js file. Note the "../" path.
+    -->
+    <script src="../layout.js" defer></script>
+
+</body>
+</html>
