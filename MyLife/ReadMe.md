@@ -4,14 +4,14 @@
 
 This MPA contains the following assets:-  
 
-* **Home Page**  
+* **Index Page**  
     Home page for web site.  
 
-* **Aboutme Page**  
+* **AboutMe Page**  
     Biography page.  
 
-* **My Pet**  
-    Articles about our Ellaour pet Shih Tzu.  
+* **MyPet**  
+    Articles about Ella our pet Shih Tzu.  
 
 ## Packaging the Site
 
