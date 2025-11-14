@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Topological Sort</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link-active { color: #2563eb; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50"></header>
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <div id="page-article" class="page-content">
+            <section class="bg-white p-8 rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Understanding Topological Sort</h1>
+                <p class="text-gray-700 mb-6">A practical guide to ordering database scripts by dependency using topological sorting.</p>
+                <div class="space-y-8">
+                    <!-- Problem Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-blue-700 mb-2">Problem</h2>
+                        <p class="text-gray-700">Suppose you have a program that builds a database from a set of table scripts. Each script (e.g., <code>Customer.sql</code>, <code>Order.sql</code>) may depend on other tables. To build the database correctly, you need a method to order these scripts so that dependencies are created first. This is a classic dependency ordering problem, solved by <strong>topological sort</strong>.</p>
+                    </section>
+                    <!-- Code Example Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-blue-700 mb-2">Code Example (C#)</h2>
+                        <pre class="bg-gray-100 rounded p-4 overflow-x-auto text-sm"><code>using System;
+using System.Collections.Generic;
+
+public class TopologicalSorter
+{
+    public List&lt;string&gt; Sort(Dictionary&lt;string, List&lt;string&gt;&gt; dependencies)
+    {
+        var result = new List&lt;string&gt;();
+        var visited = new HashSet&lt;string&gt;();
+        var visiting = new HashSet&lt;string&gt;();
+
+        void Visit(string node)
+        {
+            if (visited.Contains(node)) return;
+            if (visiting.Contains(node))
+                throw new InvalidOperationException($"Cycle detected at {node}");
+            visiting.Add(node);
+            foreach (var dep in dependencies.GetValueOrDefault(node, new List&lt;string&gt;()))
+                Visit(dep);
+            visiting.Remove(node);
+            visited.Add(node);
+            result.Add(node);
+        }
+
+        foreach (var node in dependencies.Keys)
+            Visit(node);
+        return result;
+    }
+}
+</code></pre>
+                    </section>
+                    <!-- Usage Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-blue-700 mb-2">Usage</h2>
+                        <p class="text-gray-700 mb-2">Imagine you have these scripts:</p>
+                        <ul class="list-disc pl-6 text-gray-700 mb-2">
+                            <li>Customer.sql (no dependencies)</li>
+                            <li>Order.sql (depends on Customer)</li>
+                            <li>OrderItem.sql (depends on Order)</li>
+                        </ul>
+                        <pre class="bg-gray-100 rounded p-4 overflow-x-auto text-sm mb-2"><code>// Example usage
+var dependencies = new Dictionary&lt;string, List&lt;string&gt;&gt;
+{
+    { "Customer", new List&lt;string&gt;() },
+    { "Order", new List&lt;string&gt; { "Customer" } },
+    { "OrderItem", new List&lt;string&gt; { "Order" } }
+};
+var sorter = new TopologicalSorter();
+var ordered = sorter.Sort(dependencies);
+// ordered: ["Customer", "Order", "OrderItem"]
+</code></pre>
+                        <p class="text-gray-700">You can use the <code>ordered</code> list to execute your scripts in the correct order, ensuring all dependencies are satisfied.</p>
+                                        </section>
+                    <!-- Alternative Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-blue-700 mb-2">Alternative Approaches</h2>
+                        <p class="text-gray-700 mb-2">Other ways to solve this problem include using Kahn's algorithm, leveraging database management tools that handle dependencies, or manually specifying the order. Topological sort is a general-purpose solution for any dependency graph.</p>
+                    </section>
+                    <!-- Summary Section -->
+                    <section>
+                        <h2 class="text-2xl font-semibold text-blue-700 mb-2">Summary</h2>
+                        <p class="text-gray-700 mb-2">We solved the problem of ordering database scripts by dependency using topological sort. This approach ensures that each script is executed only after its dependencies are created, preventing errors and making database builds reliable.</p>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200"></footer>
+    <script src="../layout.js" defer></script>
+</body>
+</html>
