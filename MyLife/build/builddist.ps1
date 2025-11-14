@@ -14,3 +14,6 @@ Copy-Item -Path "portrait.jpg" -Destination "dist/" -Force
 
 # Copy MyPet/ folder
 Copy-Item -Path "MyPet" -Destination "dist/" -Recurse -Force
+
+# Copy MyArticle/ folder
+Copy-Item -Path "MyArticle" -Destination "dist/" -Recurse -Force
