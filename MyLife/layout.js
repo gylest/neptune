@@ -14,7 +14,7 @@ const headerHTML = `
             <!-- This link points to the MyPet/ folder, which loads MyPet/index.html -->
             <a href="/MyPet/" class="text-gray-600 hover:text-blue-600 nav-link" data-page="pet">My Pet</a>
             <a href="#" class="text-gray-600 hover:text-blue-600 nav-link" data-page="reviews">Movie Reviews</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 nav-link" data-page="tech">Tech Articles</a>
+                <a href="/MyArticle/index.html" class="text-gray-600 hover:text-blue-600 nav-link" data-page="tech">Tech Articles</a>
             <a href="#" class="text-gray-600 hover:text-blue-600 nav-link" data-page="news">News</a>
             <!-- UPDATED: Link now points to the new AboutMe.html page -->
             <a href="/AboutMe.html" class="text-gray-600 hover:text-blue-600 nav-link" data-page="about">About Me</a>
@@ -36,7 +36,7 @@ const headerHTML = `
         <!-- This link points to the MyPet/ folder, which loads MyPet/index.html -->
         <a href="/MyPet/" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="pet">My Pet</a>
         <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="reviews">Movie Reviews</a>
-        <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="tech">Tech Articles</a>
+            <a href="/MyArticle/index.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="tech">Tech Articles</a>
         <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="news">News</a>
         <!-- UPDATED: Link now points to the new AboutMe.html page -->
         <a href="/AboutMe.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md nav-link" data-page="about">About Me</a>
