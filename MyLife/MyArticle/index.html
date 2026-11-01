@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Articles</title>
-    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <title>Tech Articles</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import Inter font -->
@@ -17,19 +17,34 @@
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+
+    <!-- =========== NAVIGATION BAR =========== -->
     <header id="main-header" class="bg-white shadow-md sticky top-0 z-50"></header>
+
+    <!-- =========== MAIN CONTENT AREA =========== -->
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- =========== TECH ARTICLES LISTING PAGE =========== -->
         <div id="page-article" class="page-content">
             <section class="bg-white p-8 rounded-lg shadow-md">
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">My Technical Articles</h1>
-                <p class="text-lg text-gray-700 mb-6">Welcome to my collection of technical articles and tutorials.</p>
-                <ul class="list-disc pl-6 space-y-2">
-                    <li><a href="TechArticle1.html" class="text-blue-600 hover:underline">Understanding Topological Sort</a></li>
-                </ul>
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">My Technical Articles</h1>
+                <p class="text-lg text-gray-600 mb-8">Welcome to my collection of technical articles and tutorials.</p>
+
+                <!-- Grid of Tech Articles (Auto-populated from articles-data.js) -->
+                <div id="category-articles-grid" data-category="tech" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Automatically populated by layout.js -->
+                </div>
             </section>
         </div>
+
     </main>
+
+    <!-- =========== FOOTER =========== -->
     <footer id="main-footer" class="bg-white mt-12 py-8 border-t border-gray-200"></footer>
-    <script src="../layout.js" defer></script>
+
+    <!-- =========== JAVASCRIPT =========== -->
+    <script src="/articles-data.js" defer></script>
+    <script src="/layout.js" defer></script>
+
 </body>
 </html>

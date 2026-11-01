@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import Inter font -->
@@ -36,11 +36,6 @@
     <!-- =========== MAIN CONTENT AREA =========== -->
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
 
-        <!-- 
-          Page content containers
-          This is now ONLY the home page content.
-        -->
-
         <!-- =========== HOME PAGE =========== -->
         <div id="page-home" class="page-content">
             <!-- Welcome Section -->
@@ -50,55 +45,22 @@
                     Hi, I'm <b>Tony Gyles</b>. This is my corner of the web where I share my passions.
                     You'll find thoughts on software, movies, my pet, and more.
                 </p>
+                <!-- Quick Category Navigation Pills -->
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <a href="/MyPet/index.html" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold hover:bg-blue-200 transition-colors">My Pet &amp; Fun Facts</a>
+                    <a href="/MovieReviews/index.html" class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-semibold hover:bg-red-200 transition-colors">Movie Reviews</a>
+                    <a href="/MyArticle/index.html" class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold hover:bg-purple-200 transition-colors">Tech Articles</a>
+                </div>
             </section>
 
-            <!-- Recent Posts Section -->
+            <!-- Recent Posts Section (Auto-populated from articles-data.js) -->
             <section class="mt-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Recent Posts</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <!-- Recent Post Card 1 (Pet) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
-                        <img src="https://placehold.co/600x400/93c5fd/ffffff?text=Fun+Facts" alt="Fun Facts" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <!-- UPDATED: This category label now links to the pet landing page -->
-                            <a href="/MyPet/" class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 hover:bg-blue-200 transition-colors">My Pet</a>
-                            <h3 class="text-xl font-bold mb-2">Fun Facts</h3>
-                            <p class="text-gray-600 mb-4">10 Interesting Facts About Shih Tzu...</p>
-                            <!-- This link now points to the actual page -->
-                            <a href="/MyPet/MyPetStory1.html" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Recent Post Card 2 (Movie Review) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
-                        <img src="https://placehold.co/600x400/fca5a5/ffffff?text=Movie+Review" alt="Movie Review" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <!-- UPDATED: This category label now links to a (future) movie review landing page -->
-                            <a href="#" class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 hover:bg-red-200 transition-colors">Movie Reviews</a>
-                            <h3 class="text-xl font-bold mb-2">Review: Predator: Badlands</h3>
-                            <p class="text-gray-600 mb-4">This new movie was a visual masterpiece, but did the plot hold up?...</p>
-                            <a href="#" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Recent Post Card 3 (Tech) -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
-                        <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Tech+Article" alt="Tech Article" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <!-- UPDATED: This category label now links to a (future) tech landing page -->
-                                <a href="/MyArticle/index.html" class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2 hover:bg-purple-200 transition-colors">Tech Articles</a>
-                            <h3 class="text-xl font-bold mb-2">Understanding Topological Sort</h3>
-                            <p class="text-gray-600 mb-4">A deep dive into how topological sorting works ... </p>
-                                <a href="/MyArticle/TechArticle1.html" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
-
+                <div id="home-recent-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Automatically populated from articles-data.js by layout.js -->
                 </div>
             </section>
         </div>
-
-        <!-- All other <div id="page-..."> sections have been removed -->
 
     </main>
 
@@ -112,9 +74,10 @@
 
     <!-- 
       =========== JAVASCRIPT ===========
-      We only need to load the layout.js file
+      Load articles-data.js first, then layout.js
     -->
-    <script src="layout.js" defer></script>
+    <script src="/articles-data.js" defer></script>
+    <script src="/layout.js" defer></script>
 
 </body>
 </html>

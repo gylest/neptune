@@ -13,6 +13,21 @@ This MPA contains the following assets:-
 * **MyPet**  
     Articles about Ella our pet Shih Tzu.  
 
+* **MovieReviews (`MovieReviews/`)**  
+    Movie reviews and film commentary.  
+
+* **MyArticle (`MyArticle/`)**  
+    Technical articles and software engineering tutorials.  
+
+* **Images (`images/`)**  
+    Site-wide icons/photos at root (`images/`), with category subfolders (`images/pet/`, `images/movie-reviews/`, `images/tech-articles/`).  
+
+## Adding a New Weekly Article
+
+1. Copy `article-template.html` into the target category folder (`MyPet/`, `MovieReviews/`, or `MyArticle/`), rename it, and write your article content.
+2. Open `articles-data.js` and add a new entry at the top of the `ARTICLES` array for that category (`category: 'pet'`, `'reviews'`, or `'tech'`).
+3. Both the main `index.html` page ("Recent Posts"), the category listing page, and the article's breadcrumb/next-previous links will update automatically.
+
 ## Packaging the Site
 
 At PowerShell command prompt: `./build/builddist.ps1`  
@@ -130,6 +145,11 @@ Click button `Route Domains to CloudFront` to ensure the following links will wo
 <https://www.octobridge.co.uk>
 
 ## Frequently Asked Questions
+
+### How to Publish Your Weekly Article Going Forward (2 Steps)
+
+1. Copy article-template.html into MyPet/, MovieReviews/, or MyArticle/, rename it, and write your article.
+2. Add one entry at the top of that category in articles-data.js — the home page, category page, and article navigation links will all update automatically.
 
 ### How to Force a Deployment of S3 Bucket to CloudFront Distribution
 
