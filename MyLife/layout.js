@@ -6,7 +6,7 @@ const headerHTML = `
     <div class="flex items-center justify-between">
         
         <!-- Site Title / Logo -->
-        <a href="/" class="text-2xl font-bold text-blue-600">MyLife</a>
+        <a href="/" class="flex items-center space-x-2 text-2xl font-bold text-blue-600"><img src="/images/logo.svg" alt="MyLife Logo" class="h-20 w-20"><span>MyLife</span></a>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex space-x-6">
