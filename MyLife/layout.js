@@ -46,7 +46,7 @@ const headerHTML = `
 
 const footerHTML = `
 <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-    <p>&copy; 2025 Tony Gyles. All rights reserved.</p>
+    <p>&copy; 2026 Tony Gyles. All rights reserved.</p>
 </div>
 `;
 
