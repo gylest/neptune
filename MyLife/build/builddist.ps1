@@ -10,10 +10,12 @@ if (!(Test-Path "dist")) {
 Copy-Item -Path "index.html" -Destination "dist/" -Force
 Copy-Item -Path "AboutMe.html" -Destination "dist/" -Force
 Copy-Item -Path "layout.js" -Destination "dist/" -Force
-Copy-Item -Path "portrait.jpg" -Destination "dist/" -Force
 
 # Copy MyPet/ folder
 Copy-Item -Path "MyPet" -Destination "dist/" -Recurse -Force
 
 # Copy MyArticle/ folder
 Copy-Item -Path "MyArticle" -Destination "dist/" -Recurse -Force
+
+# Copy images/ folder
+Copy-Item -Path "images" -Destination "dist/" -Recurse -Force

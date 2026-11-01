@@ -1,0 +1,12 @@
+Logo and Favicon
+----------------
+I would like you to design a logo for this website called "MyLife".
+The logo should be a small dog in a space suit with a clear helmet circling a light blue moon. Have a few starts in the backgroud ,
+and a comet racing by.
+Use nanobanana to generate the logo. The format should be ".svg", the filename shoudl be "logo.svg" and store in "/images".
+Also create a smaller favicon from this logo and call the file "favicon.svg" and store in "/images".
+
+Add the logo into the menu bar of all html pages in this site, add it to the left of test "MyLife",
+do not add to folder "/dist" as this is created from a build file. Ensure they reference the file in "images" folder.
+
+Add the favicon as an icon to all html pages. Ensure they reference the file in "images" folder.
