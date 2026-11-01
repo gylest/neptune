@@ -128,3 +128,19 @@ Click button `Route Domains to CloudFront` to ensure the following links will wo
 
 <https://octobridge.co.uk>  
 <https://www.octobridge.co.uk>
+
+## Frequently Asked Questions
+
+### How to Force a Deployment of S3 Bucket to CloudFront Distribution
+
+Create an invalidation using AWS CLI:-  
+
+```bash
+aws cloudfront create-invalidation --distribution-id d1zhb64xsotj29 --paths "/*"
+```
+
+Create an invalidation using AWS Console:-  
+
+In AWS Console, goto `CloudFront` and select the relevant distribution.  
+Select tab `Invalidations`, then click button `Create Invalidation`.  
+Set `Selection Method = By paths`, and in `Object paths to invalidate = \*`, finally select button to create.  
