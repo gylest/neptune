@@ -1,0 +1,20 @@
+Introduction
+------------
+I needed to create a small business webiste quickly and at low cost for a family relative.
+As I'm a software engineer a product that has close integrataion with GitHub was a no brainer.
+Cloudfare enabled me to create the core of the website in a single.
+I was impressed with the ease of modifciations and free HTTPS with DDoS was a great bonus.
+
+
+Top Ten reasons i like CloudFlare for static websites
+------------------------------------------------------
+1. Integration with GitHub makes it trivial to publish a website. After you have setup an application , link this to a GitHub repo. Then when a pull request is merged a deployment of website is automatic.
+2. Ultrafast content delivery network worldwide. Pages are not pushed to your nearest data centre but distributed and cached across Cloufare's global edge network.
+3. The Cloudflare AI bot is genuinly helpful. It doesn't just ansrer questsions it will make configuration chnages to DNS, project settings etc.
+4. Free email integrtaion tier. It is possible to send emails to a fixed and verified email account for free. For a paid plan you can send to unlimited accounts.
+5. Free SSL certificates. Cloudflare will automatically generate and renew SSL certificates for your domain.
+6. Free DDoS protection. Cloudflare will automatically detect and mitigate DDoS attacks on your website.
+7. Free analytics. Cloudflare provides free analytics on your website traffic, including unique visitors, page views, and bandwidth usage.
+8. Free firewall and security features. Cloudflare provides a free firewall and security features to protect your website from malicious traffic and attacks.
+9. Free caching and performance optimization. Cloudflare automatically caches your website's static content and optimizes it for faster loading times.
+10. Free domain registration and management. Cloudflare allows you to register and manage your domain names for free, making it easy to keep your website online and accessible.
