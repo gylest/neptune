@@ -73,6 +73,15 @@ const ARTICLES = [
 
     // --- TECH ARTICLES ---
     {
+        title: 'Using Cloudflare for Static Web Sites',
+        category: 'tech',
+        date: 'Nov 2, 2026',
+        summary: 'Why Cloudflare\'s GitHub integration, global edge network, free SSL, and DDoS protection make it a no-brainer for fast, low-cost static websites...',
+        image: '/images/tech-articles/cloudflare_1.jpg',
+        imageAlt: 'Tech Article: Using Cloudflare for Static Web Sites',
+        url: '/MyArticle/CloudflareStaticWebSites.html'
+    },
+    {
         title: 'Understanding Topological Sort',
         category: 'tech',
         date: 'Nov 1, 2025',

@@ -16,3 +16,8 @@ Predator Badlands Review
 Complete the movie review in file "PredatorBadlands.html" using the source file "PredatorBadlands.txt".
 In addition add in the images from images/movie/reviews fro files pbl_*.jpg.
 The images shoudl be intersparsed between the words. From the bullet points in source create complete sentances and add and add anyhting else you think will improve this movie review article.
+
+Cloudflare Technical Article
+----------------------------
+Create a new technical articale for my web site called "Using Cloudflare for Static Web Sites".
+Utilize the  file "Cloudflare.txt" from the "source" folder, also add the image cloudflare_1.jpg from the imaes fodler.
