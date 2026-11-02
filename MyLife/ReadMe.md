@@ -28,10 +28,6 @@ This MPA contains the following assets:-
 2. Open `articles-data.js` and add a new entry at the top of the `ARTICLES` array for that category (`category: 'pet'`, `'reviews'`, or `'tech'`).
 3. Both the main `index.html` page ("Recent Posts"), the category listing page, and the article's breadcrumb/next-previous links will update automatically.
 
-## Packaging the Site
-
-At PowerShell command prompt: `./build/builddist.ps1`  
-
 ## Deployment to AWS
 
 ### Create AWS S3 Bucket to Host Website
@@ -68,12 +64,6 @@ At PowerShell command prompt: `./build/builddist.ps1`
    * Select `Enable`
    * Specify index document
    * Select `Save`
-
-6. Upload Website Files
-   * Go to the Objects tab of your bucket.
-   * Click Upload.
-   * Upload all your static website files (HTML, CSS, JavaScript, images, etc.). Make sure your main page is named the same as your specified index document (index.html).
-   * The web site address is <http://octobridge.co.uk.s3-website.eu-west-2.amazonaws.com/>
 
    Repeat the above by creating a bucket `www.octobridge.co.uk`. The main difference  being in the bucket properties set the hosting type to `Redirect requests for an object` and give hostname `octobridge.co.uk`.  
 
@@ -146,12 +136,35 @@ Click button `Route Domains to CloudFront` to ensure the following links will wo
 
 ## Frequently Asked Questions
 
+### How to package the site for distribution
+
+Run the following PowerShell script:  
+
+```powershell
+./build/builddist.ps1
+```
+
+### How to deploy the site via a script
+
+Run the following PowerShell script:  
+
+```powershell
+./build/deploy.ps1
+```
+
 ### How to Publish Your Weekly Article Going Forward (2 Steps)
 
 1. Copy article-template.html into MyPet/, MovieReviews/, or MyArticle/, rename it, and write your article.
 2. Add one entry at the top of that category in articles-data.js — the home page, category page, and article navigation links will all update automatically.
 
-### How to Force a Deployment of S3 Bucket to CloudFront Distribution
+### How to Manually Copy Web Site to AWS S3 Bucket
+
+1. Login to AWS console and switch
+2. Go to Amazon S3 and open bucket `octobridge.co.uk`.
+3. Ensure in `Objects` tab and delete all files and folders in bucket.
+4. Click `Upload` to copy all files and fodlers from local folder `dist`
+
+### How to Manually Force a Deployment of S3 Bucket to CloudFront Distribution
 
 Create an invalidation using AWS CLI:-  
 

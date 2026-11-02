@@ -21,3 +21,19 @@ Cloudflare Technical Article
 ----------------------------
 Create a new technical articale for my web site called "Using Cloudflare for Static Web Sites".
 Utilize the  file "Cloudflare.txt" from the "source" folder, also add the image cloudflare_1.jpg from the imaes fodler.
+
+Deployment Script
+-----------------
+This script should do the following:-
+1. Checks
+- Check AWS CLI v2 is installed, if not installed then error
+- Check local folder "dist/" is not empty, if empty then error
+- Check have access to S3 bucket  : https://eu-west-2.console.aws.amazon.com/s3/buckets/octobridge.co.uk, if not error
+2. Delete all files and folders in this bucket
+3. Copy all files and folders on local PC in folder "dist/" to the S3 destination
+4. Create a CloudFront invalidation with the following information:-
+- Distribution domain name = <d1zhb64xsotj29.cloudfront.net>
+- Selection method: "By Paths"
+- Object paths to invalidate: "/*"
+- Before the invalidation is created primpt user for confirmation
+5. After each step display a message to confirm status of step i.e. success , failure etc
