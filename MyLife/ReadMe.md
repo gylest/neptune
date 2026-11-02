@@ -141,7 +141,7 @@ Click button `Route Domains to CloudFront` to ensure the following links will wo
 Run the following PowerShell script:  
 
 ```powershell
-./build/builddist.ps1
+./build/build.ps1
 ```
 
 ### How to deploy the site via a script
